@@ -39,7 +39,8 @@ SRCS = ft_isalnum.c \
 	ft_striteri.c \
 	ft_printf.c \
 	ft_putchar.c \
-	ft_putstr.c
+	ft_putstr.c \
+	ft_putaddress.c
 
 OBJS = $(SRCS:.c=.o)
 NAME = libft.a

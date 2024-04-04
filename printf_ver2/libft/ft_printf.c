@@ -9,7 +9,8 @@ static int ft_type(va_list lst_va, const char *str)
         cnt += ft_putchar((char)va_arg(lst_va, int));
     else if (*(str + 1) == 's')
         cnt += ft_putstr(va_arg(lst_va, char *));
-    // else if (*(str + 1) == 'p')
+    else if (*(str + 1) == 'p')
+        cnt += ft_putstr(va_arg(lst_va, char *));
     // else if (*(str + 1) == 'd')
     // else if (*(str + 1) == 'i')
     // else if (*(str + 1) == 'u')
