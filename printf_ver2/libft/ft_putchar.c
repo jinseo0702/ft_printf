@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int	ft_putchar(char c)
+int	ft_putchar(unsigned char c)
 {
 	ssize_t cnt;
 

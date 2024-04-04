@@ -26,3 +26,49 @@ int ft_putaddress(void *ptr)
     re_cnt += write(1, &hex[cnt_put_address], 16 - cnt_put_address);
     return ((int)re_cnt);
 }
+
+int ft_put_hex(unsigned int n)
+{
+    int cnt_put_hex;
+    ssize_t re_cnt_hex;
+    char hex[8];
+
+    ft_memset(hex, 0, 8);
+    re_cnt_hex = 0;
+    cnt_put_hex = 8;
+    if (n == 0)
+    {
+        re_cnt_hex += write(1, "0", 1);
+        return (re_cnt_hex);
+    }
+    while (n > 0)
+    {
+        hex[--cnt_put_hex] = "0123456789abcdef"[n % 16];
+        n /= 16;
+    }
+    re_cnt_hex += write(1, &hex[cnt_put_hex], 8 - cnt_put_hex);
+    return ((int)re_cnt_hex);
+}
+
+int ft_put_hex_upper(unsigned int n)
+{
+    int cnt_put_hex_up;
+    ssize_t re_cnt_hex_up;
+    char hex[8];
+
+    ft_memset(hex, 0, 8);
+    re_cnt_hex_up = 0;
+    cnt_put_hex_up = 8;
+    if (n == 0)
+    {
+        re_cnt_hex_up += write(1, "0", 1);
+        return (re_cnt_hex_up);
+    }
+    while (n > 0)
+    {
+        hex[--cnt_put_hex_up] = "0123456789ABCDEF"[n % 16];
+        n /= 16;
+    }
+    re_cnt_hex_up += write(1, &hex[cnt_put_hex_up], 8 - cnt_put_hex_up);
+    return ((int)re_cnt_hex_up);
+}

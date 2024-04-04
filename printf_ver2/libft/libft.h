@@ -52,8 +52,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 int     ft_printf(const char *str, ...);
 int     ft_putstr(const char *str);
-int     ft_putchar(char c);
+int     ft_putchar(unsigned char c);
 int     ft_putaddress(void *ptr);
-int	ft_putnbr(int n);
+int 	ft_putnbr(int n);
+int     ft_putnbr_un(unsigned int n);
+int     ft_put_hex(unsigned int n);
+int     ft_put_hex_upper(unsigned int n);
 
 #endif
