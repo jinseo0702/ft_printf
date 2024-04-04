@@ -41,7 +41,7 @@ int main()
     //그렇다면 그냥 빈 값이 나오는 경우는 어떤 값을 return 하는걸까? --> 1을 retrun 하는것을 알수 있다.
     printf("%d\n", printf("%c", NULL));
     //printf의 %d에 대해서 알아 보자.. 1. 오버플로우 2. 음수 오버플로우의 경우
-        printf("---start %%d value\n");
+    printf("---start %%d value\n");
     printf("case normal +1 == %d\n", 1);
     printf("case normal -1 == %d\n", -1);
     printf("case normal  0 == %d\n", 0);
@@ -54,7 +54,7 @@ int main()
     printf("print 8base %d\n", 010);
     printf("print 16base %d\n", 0xf + 15);// 이렇게 더하는것까지 가능하다.
     //%i의 경우를 보자 --> %d랑 아예 같은값을 공유하는것을 알수 있다.
-        printf("---start %%i value\n");
+    printf("---start %%i value\n");
     printf("case normal +1 == %i\n", 1);
     printf("case normal -1 == %i\n", -1);
     printf("case normal  0 == %i\n", 0);
