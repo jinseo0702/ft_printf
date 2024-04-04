@@ -117,12 +117,13 @@ int main()
     write(1, "\n", 1);
     write(1, &Dec_A, 1);
     write(1, "\n", 1);//전체적으로 확인 해본결과 16진수 10진수 는 잘찍힌다.
-    int error_pritf = 0;
-    error_pritf = printf("12%yuyuyuyu");//이경우에 출력물은 12%yuyuyuyu return values 는 11 문자 크기 만큼된다.
-    printf("\n%d\n", error_pritf);
-    // printf("12%1231789898989\n");//이경우에는 출력물은 12%이다 return values 는 -1
-    // printf("12% 2147483647\n");//확인 해본결과 %다음에 들어가는 숫자가 int_max의 값안이면 -1이출력 되지만 그범위를 벗어나면 그대로 출력이되는걸 알수 있다
-    printf("\n12%012\n");//확인 결과 문제가 생기는 값의 범위는 1 ~ 2147483647 이다 이때 값이 들어 간다면 -1 하자만 이범위를 벗어나면 그대로 출력이되는걸 알수 있다.
-    // printf("\n%c\n", 'a');
+    // int error_pritf = 0;
+    // error_pritf = printf("12%yuyuyuyu");//이경우에 출력물은 12%yuyuyuyu return values 는 11 문자 크기 만큼된다.
+    // printf("\n%d\n", error_pritf);
+    // // printf("12%1231789898989\n");//이경우에는 출력물은 12%이다 return values 는 -1
+    // // printf("12% 2147483647\n");//확인 해본결과 %다음에 들어가는 숫자가 int_max의 값안이면 -1이출력 되지만 그범위를 벗어나면 그대로 출력이되는걸 알수 있다
+    // printf("\n12%012\n");//확인 결과 문제가 생기는 값의 범위는 1 ~ 2147483647 이다 이때 값이 들어 간다면 -1 하자만 이범위를 벗어나면 그대로 출력이되는걸 알수 있다.
+    // // printf("\n%c\n", 'a');
+    printf("0x%p\n", (void *)-1);
     return (0);
 }

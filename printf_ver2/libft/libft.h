@@ -54,5 +54,6 @@ int     ft_printf(const char *str, ...);
 int     ft_putstr(const char *str);
 int     ft_putchar(char c);
 int     ft_putaddress(void *ptr);
+int	ft_putnbr(int n);
 
 #endif
