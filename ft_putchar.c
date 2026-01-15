@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jinseo <jinseo@student.42gyeongsan.kr      +#+  +:+       +#+        */
+/*   By: jinseo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/27 15:25:49 by jinseo            #+#    #+#             */
-/*   Updated: 2024/02/27 20:31:02 by jinseo           ###   ########.fr       */
+/*   Created: 2024/04/07 13:58:58 by jinseo            #+#    #+#             */
+/*   Updated: 2024/04/07 14:21:27 by jinseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libftprintf.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_putchar(unsigned char c)
 {
-	unsigned char	*cpy;
-	size_t			cnt;
+	ssize_t	cnt;
 
-	cpy = (unsigned char *)dest;
 	cnt = 0;
-	while (cnt < n)
-	{
-		*(cpy + cnt) = *(unsigned char *)(src + cnt);
-		cnt++;
-	}
-	return (dest);
+	cnt = write(1, &c, 1);
+	return ((int)cnt);
 }
+
+int	ft_fputchar(unsigned char c, size_t fd)
+{
+	ssize_t	cnt;
+
+	cnt = 0;
+	cnt = write(fd, &c, 1);
+	return ((int)cnt);
+}
+
